@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Survival Prediction</title>
+</head>
+<body>
+<h1>Fill In The Details About You:</h1>
+<form method="POST">
+
+    <label for="input_class">Enter Your Ticket Class:</label>
+    <select name="input_class" id="input_class">
+        <option value=0>1st</option>
+        <option value=0.5>2nd</option>
+        <option value=1>3rd</option>
+    </select>
+
+    <br>
+    <br>
+
+    <label for="input_age">Enter Passenger Age:</label>
+    <input type="number" name="input_age" id="input_age">
+
+    <br>
+    <br>
+
+    <label for="input_sex">Enter Passenger Sex:</label>
+    <select name="input_sex" id="input_sex">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+    </select>
+
+    <br>
+    <br>
+
+
+    <label for="input_sblng">Enter Passenger Siblings/Spouses:</label>
+    <select name="input_sblng" id="input_sblng">
+        <option value=0>0</option>
+        <option value=1>1</option>
+        <option value=2>2</option>
+        <option value=3>3</option>
+        <option value=4>4</option>
+        <option value=5>5</option>
+        <option value=6>6</option>
+        <option value=7>7</option>
+        <option value=8>8</option>
+    </select>
+
+
+    <br>
+    <br>
+
+     <label for="input_prnts_chldrn">Enter Parents/Children:</label>
+    <select name="input_prnts_chldrn" id="input_prnts_chldrn">
+        <option value=0>0</option>
+        <option value=1>1</option>
+        <option value=2>2</option>
+        <option value=3>3</option>
+        <option value=4>4</option>
+        <option value=5>5</option>
+        <option value=6>6</option>
+    </select>
+
+    <br>
+    <br>
+
+    <label for="input_fare">Enter Your Ticket Price:</label>
+    <input type="number" name="input_fare" id="input_fare">
+
+    <br>
+    <br>
+
+    <label for="input_embark">Enter Your Ticket Class:</label>
+    <select name="input_embark" id="input_embark">
+        <option value=0>Queenstown</option>
+        <option value=0.5>Southampton</option>
+        <option value=1>Cherbourg</option>
+    </select>
+
+    <br>
+    <br>
+
+    <input type="submit" value="Predict!">
+</form>
+{% if result %}
+    <p>The Probability of Survival is: {{ result }}</p>
+{% endif %}
+</body>
+</html>
